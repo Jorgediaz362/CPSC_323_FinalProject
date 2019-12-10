@@ -26,7 +26,7 @@
                       return QUOTE;
                     }
 [a-f][a-f0-9]*			{ yylval.str = strdup(yytext); return ID; }
-[0-9]+							{ yylval.str = strdup(yytext); return number;}
+[0-9]+							{ yylval.str = strdup(yytext); return NUMBER;}
 [ \t\n] 						{}
 [-+=:,();\*]				{ return yytext[0]; }
 
