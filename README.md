@@ -12,12 +12,12 @@ lex proj.l
 2. Process YACC file  
 yacc -d proj.y
 
-3. Link the two using gcc compiler to produce an output file.  
+3. Link lex.yy.c & y.tab.c using gcc to produce an output file.  
 gcc lex.yy.c y.tab.c -o proj.out
 
-4. Run output file with new edited text file.  
+4. Run output file with newly edited text file.  
 ./proj.out < final2.txt
 
 5. Compile/run abc13.cpp file.  
-g++ abc13.cpp
+g++ abc13.cpp  
 ./a.out
