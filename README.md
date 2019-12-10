@@ -10,4 +10,6 @@ Compile Instructions:
 
 4. ./proj.out < final.txt
 
-5. ./a.out
+5. g++ aba13.cpp
+
+6. ./a.out
