@@ -100,7 +100,7 @@ type: INTEGER					  { $$ = $1; }
 
 int main(int argc, char *argv[])
 {
-	  c.output_file = fopen("aba13.cpp", "w");
+	  c.output_file = fopen("abc13.cpp", "w");
 
     if (c.output_file == NULL)
     {
