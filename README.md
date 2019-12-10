@@ -2,14 +2,22 @@
 
 Compile Instructions:
 
-1. lex proj.l
+1. Compile/run part1.cpp to produce new text file with removed comments and whitespaces.  
+g++ part1.cpp  
+./a.out
 
-2. yacc -d proj.y
+2. Process LEX file  
+lex proj.l
 
-3. gcc lex.yy.c y.tab.c -o proj.out
+2. Process YACC file  
+yacc -d proj.y
 
-4. ./proj.out < final.txt
+3. Link the two using gcc compiler to produce an output file.  
+gcc lex.yy.c y.tab.c -o proj.out
 
-5. g++ aba13.cpp
+4. Run output file with new edited text file.  
+./proj.out < final2.txt
 
-6. ./a.out
+5. Compile/run aba13.cpp file.  
+g++ aba13.cpp
+./a.out
