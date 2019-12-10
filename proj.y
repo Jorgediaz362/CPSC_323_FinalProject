@@ -11,13 +11,12 @@ void printType();
 void checkID(char *s);
 
 extern int yylineno;
-//int yydebug = 1;
 
 char str[15][10];
 int numStrings = 0;
 
 
-struct CaptainsLog
+struct Compile
 {
 	FILE *output_file;
 } c;
@@ -109,7 +108,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-	// Start the compiler
 	yyparse();
   fprintf(c.output_file, "%s\n", "return 0;");
   fprintf(c.output_file, "%s\n", "}");
@@ -159,16 +157,13 @@ void printType()
 {
 	int i;
 
-	// Print the type
 	fprintf(c.output_file, "int ");
 
-	// Print all the declared variables
 	for (i = 0; i < numStrings - 1; i++ )
 	{
 		fprintf(c.output_file, "%s, ", str[i]);
 	}
 
-	// Print the last in the array
 	fprintf(c.output_file, "%s", str[numStrings - 1]);
 }
 
