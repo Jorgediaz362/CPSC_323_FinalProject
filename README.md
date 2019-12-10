@@ -18,6 +18,6 @@ gcc lex.yy.c y.tab.c -o proj.out
 4. Run output file with new edited text file.  
 ./proj.out < final2.txt
 
-5. Compile/run aba13.cpp file.  
-g++ aba13.cpp
+5. Compile/run abc13.cpp file.  
+g++ abc13.cpp
 ./a.out
